@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(68, 66, 71);
+
+
+}
+
+div{
+    width:200px;
+    height:200px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    border: 200px;
+    border: 2px solid rgb(197, 64, 64);
+    animation:rotate 5s linear infinite;
+    box-shadow:20px 15px 10px rgb(0, 225, 255);
+    animation:rotate 2s linear infinite;
+    
+
+   
+
+    
+}
+div::before{
+
+    content:'';
+    background-image: conic-gradient(rgb(212, 78, 183) 20deg,transparent 100deg);
+    width:150%;
+    height:150%;
+    position:absolute;
+    animation:rotate 9s linear infinite;
+    background-color: rgb(114, 238, 238);
+    
+
+    
+
+    
+
+}
+
+div::after{
+     width: 190%;
+     height: 190%;
+     position:absolute;
+     border-radius: 10px;
+     background-color: black;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     color: rgb(235, 32, 167);
+     font-size: larger;
+     letter-spacing:5px;
+     box-shadow:inset 20px 20px 20px rgb(196, 70, 70);
+     background-color: rgb(211, 34, 102);
+     animation:rotate 5s linear infinite;
+
+}
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+       
+
+    }
+}
